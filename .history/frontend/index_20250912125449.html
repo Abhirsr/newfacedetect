@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Face Matcher</title>
+    <link rel="stylesheet" href="./static/styles.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <div
+      class="top-bar"
+      style="
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 16px 24px;
+        z-index: 10;
+      "
+    ></div>
+
+    <div class="container">
+      <img class="top-banner" src="./static/Kanchi.jpg" alt="image" />
+      <h1>Sri Kanchi Kamakoti Peetam</h1>
+      <p>Capture your face and we’ll upload matching images to Google Drive.</p>
+
+      <div id="form-section">
+        <div class="video-box">
+          <video id="video" autoplay></video>
+          <canvas id="canvas" style="display: none"></canvas>
+        </div>
+
+        <button onclick="capture()" class="btn">📸 Capture & Match</button>
+      </div>
+
+      <div
+        id="frames-preview"
+        style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 20px"
+      ></div>
+
+      <div id="loading" class="overlay">
+        <div class="loader-box">
+          <div class="spinner"></div>
+          <p id="pickup-line">Finding your beautiful matches... 💘</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./static/particles.js"></script>
+    <script src="./config.js"></script>
+    <script src="./static/script.js"></script>
+  </body>
+</html>

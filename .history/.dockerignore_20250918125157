@@ -1,0 +1,27 @@
+# Virtual envs and caches
+.venv
+venv*
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# OS/editor
+.DS_Store
+.history/
+
+# Git
+.git/
+.gitignore
+
+# Node
+node_modules/
+
+# App runtime data (mounted as volume in prod)
+matam/tmp_frames/
+matam/static/matched/
+matam/static/gallery/
+matam/static/models/gallery_index.pkl
+
+# Secrets
+.env
